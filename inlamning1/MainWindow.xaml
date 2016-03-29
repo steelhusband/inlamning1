@@ -5,6 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:inlamning1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid/>
+        Title="FlowChartDesigner" Height="406" Width="618">
+    <Grid Background="Gray">
+        <Canvas Name="Drawarea" Background="GhostWhite" HorizontalAlignment="Left" Height="297" Margin="109,51,0,0" VerticalAlignment="Top" Width="469" />
+        <Label x:Name="lbl_logo" Content="FlowChartDesigner" HorizontalAlignment="Left" Height="36" Margin="262,10,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontSize="16"/>
+        <Grid Name="Menu" Margin="15,51,506,141">
+            <Button x:Name="btn_text" Content="Text" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_line" Content="Pil" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_box" Content="Rektangel" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_diamond" Content="Romb" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_ellipse" Content="Ellips" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_clear" Content="Ta Bort" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_close" Content="Avsluta" HorizontalAlignment="Left" Margin="0,150,0,-11" VerticalAlignment="Top" Width="80"/>
+        </Grid>
+    </Grid>
+
+
 </Window>
