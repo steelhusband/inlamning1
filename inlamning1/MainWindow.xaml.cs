@@ -24,5 +24,17 @@ namespace inlamning1
         {
             InitializeComponent();
         }
+
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "Är du säker på att du vill avsluta?";
+
+            MessageBoxResult result = MessageBox.Show(message, "FlowChartDesigner", MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
