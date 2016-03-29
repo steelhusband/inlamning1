@@ -7,17 +7,19 @@
         mc:Ignorable="d"
         Title="FlowChartDesigner" Height="600" Width="800">
     <Grid Background="Gray">
-        <Canvas Name="Drawarea" Background="GhostWhite" HorizontalAlignment="Left" Height="490" Margin="109,51,0,0" VerticalAlignment="Top" Width="658" />
-        <Label x:Name="lbl_logo" Content="FlowChartDesigner" HorizontalAlignment="Left" Height="36" Margin="349,10,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontSize="16"/>
-        <Grid Name="Menu" Margin="15,51,688,28">
+        <Canvas Name="Drawarea" Background="GhostWhite" HorizontalAlignment="Left" Height="458" Margin="109,83,0,0" VerticalAlignment="Top" Width="658" />
+        <Grid Name="Menu_top" Margin="15,83,688,356">
             <Button x:Name="btn_text" Content="Text" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_line" Content="Pil" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_box" Content="Rektangel" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_diamond" Content="Romb" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_ellipse" Content="Ellips" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="80"/>
-            <Button x:Name="btn_clear" Content="Ta Bort" HorizontalAlignment="Left" Margin="0,439,0,-82" VerticalAlignment="Top" Width="80"/>
-            <Button x:Name="btn_close" Content="Avsluta" HorizontalAlignment="Left" Margin="0,464,0,-107" VerticalAlignment="Top" Width="80"/>
         </Grid>
+        <Grid Name="Menu_Bottom" Margin="15,474,683,10">
+            <Button x:Name="btn_clear" Content="Ta Bort" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="31"/>
+            <Button x:Name="btn_close" Content="Avsluta" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="80" Height="31"/>
+        </Grid>
+        <Image x:Name="logo" HorizontalAlignment="Left" Height="60" Margin="133,10,0,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.72,0.278"/>
     </Grid>
 
 
