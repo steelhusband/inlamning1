@@ -25,6 +25,7 @@ namespace inlamning1
             InitializeComponent();
         }
 
+        // Avstängningsfunktion med en pop-up-funktion som kräver bekräftelse för att svsulta programmet.
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             string message = "Är du säker på att du vill avsluta?";
