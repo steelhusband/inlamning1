@@ -25,18 +25,7 @@ namespace inlamning1
             InitializeComponent();
         }
 
-        // Avstängningsfunktion med en pop-up-funktion som kräver bekräftelse för att svsulta programmet.
-        private void btn_close_Click(object sender, RoutedEventArgs e)
-        {
-            string message = "Är du säker på att du vill avsluta?";
-
-            MessageBoxResult result = MessageBox.Show(message, "FlowChartDesigner", MessageBoxButton.YesNo,
-                MessageBoxImage.Warning);
-            if (result == MessageBoxResult.Yes)
-            {
-                this.Close();
-            }
-        }
+        
 
         private void btn_ellipse_Click(object sender, RoutedEventArgs e)
         {
@@ -86,6 +75,56 @@ namespace inlamning1
             // Add Ellipse to the Grid.
             Drawarea.Children.Add(diamond);
             
+        }
+
+        private void btn_box_Click(object sender, RoutedEventArgs e)
+        {
+            // Create an Ellipse
+            Rectangle rectangle = new Rectangle();
+            rectangle.Height = 75;
+            rectangle.Width = 75;
+            
+
+            // Create a blue and a black Brush
+            SolidColorBrush fillColour = new SolidColorBrush();
+            fillColour.Color = Colors.Orange;
+            SolidColorBrush edgeColour = new SolidColorBrush();
+            edgeColour.Color = Colors.Black;
+
+            // Set Ellipse's width and color
+            rectangle.StrokeThickness = 1;
+            rectangle.Stroke = edgeColour;
+            // Fill rectangle with blue color
+            rectangle.Fill = fillColour;
+
+            // Add Ellipse to the Grid.
+            Drawarea.Children.Add(rectangle);
+
+        }
+
+        private void btn_clear_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "Är du säker på att du vill rensa ritbordet?";
+
+            MessageBoxResult result = MessageBox.Show(message, "FlowChartDesigner", MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                Drawarea.Children.Clear();
+            }
+            
+        }
+        // Avstängningsfunktion med en pop-up-funktion som kräver bekräftelse för att svsulta programmet.
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "Är du säker på att du vill avsluta?";
+
+            MessageBoxResult result = MessageBox.Show(message, "FlowChartDesigner", MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
     
