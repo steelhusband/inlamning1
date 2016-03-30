@@ -8,12 +8,14 @@
         Title="FlowChartDesigner" Height="600" Width="800">
     <Grid Background="Gray">
         <Canvas Name="Drawarea" Background="GhostWhite" HorizontalAlignment="Left" Height="458" Margin="109,83,0,0" VerticalAlignment="Top" Width="658" />
+        
+        
         <Grid Name="Menu_top" Margin="15,83,688,356">
             <Button x:Name="btn_text" Content="Text" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_line" Content="Pil" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btn_box" Content="Rektangel" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="80"/>
-            <Button x:Name="btn_diamond" Content="Romb" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="80"/>
-            <Button x:Name="btn_ellipse" Content="Ellips" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_diamond" Content="Romb" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="80" Click="btn_diamond_Click"/>
+            <Button x:Name="btn_ellipse" Content="Ellips" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="80" Click="btn_ellipse_Click"/>
         </Grid>
         <Grid Name="Menu_Bottom" Margin="15,474,683,10">
             <Button x:Name="btn_clear" Content="Ta Bort" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="31"/>
