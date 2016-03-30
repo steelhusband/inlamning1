@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace inlamning1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -41,6 +38,8 @@ namespace inlamning1
             ellipse.Fill = fillColour;
             
             Drawarea.Children.Add(ellipse);
+            Canvas.SetLeft(ellipse, 200);
+            Canvas.SetTop(ellipse, 200);
         }
 
         private void btn_diamond_Click(object sender, RoutedEventArgs e)
@@ -61,6 +60,8 @@ namespace inlamning1
             diamond.Fill = fillColour;
             
             Drawarea.Children.Add(diamond);
+            Canvas.SetLeft(diamond, 200);
+            Canvas.SetTop(diamond, 100);
         }
 
         private void btn_box_Click(object sender, RoutedEventArgs e)
@@ -68,7 +69,7 @@ namespace inlamning1
             Rectangle rectangle = new Rectangle();
             rectangle.Height = 75;
             rectangle.Width = 75;
-            
+
             SolidColorBrush fillColour = new SolidColorBrush();
             fillColour.Color = Colors.Orange;
             SolidColorBrush edgeColour = new SolidColorBrush();
@@ -79,6 +80,8 @@ namespace inlamning1
             rectangle.Fill = fillColour;
             
             Drawarea.Children.Add(rectangle);
+            Canvas.SetLeft(rectangle, 50);
+            Canvas.SetTop(rectangle, 50);
         }
 
         private void btn_clear_Click(object sender, RoutedEventArgs e)
@@ -92,6 +95,7 @@ namespace inlamning1
                 Drawarea.Children.Clear();
             }
         }
+
         // Avstängningsfunktion med en pop-up-funktion som kräver bekräftelse för att svsulta programmet.
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
