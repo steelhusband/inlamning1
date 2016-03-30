@@ -95,8 +95,7 @@ namespace inlamning1
                 Drawarea.Children.Clear();
             }
         }
-
-        // Avstängningsfunktion med en pop-up-funktion som kräver bekräftelse för att svsulta programmet.
+        
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
             string message = "Är du säker på att du vill avsluta?";
@@ -107,6 +106,24 @@ namespace inlamning1
             {
                 this.Close();
             }
+        }
+
+        private void btn_save_Click(object sender, RoutedEventArgs e)
+        {
+            Rect draw = new Rect(Drawarea.RenderSize);
+            RenderTargetBitmap rtb = new RenderTargetBitmap((int)draw.Right,
+            (int)draw.Bottom, 96d, 96d, System.Windows.Media.PixelFormats.Default);
+            rtb.Render(Drawarea);
+
+            BitmapEncoder pngEncoder = new PngBitmapEncoder();
+            pngEncoder.Frames.Add(BitmapFrame.Create(rtb));
+            
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+
+            pngEncoder.Save(ms);
+            ms.Close();
+            System.IO.File.WriteAllBytes("chart.png", ms.ToArray());
+            MessageBox.Show("Filen är sparad!");
         }
     }
 }

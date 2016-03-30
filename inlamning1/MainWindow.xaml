@@ -18,7 +18,7 @@
             <Button x:Name="btn_ellipse" Content="Ellips" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="80" Click="btn_ellipse_Click"/>
         </Grid>
         <Grid Name="Menu_Bottom" Margin="15,475,683,10">
-            <Button x:Name="btn_save" Content="Spara" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="0,-36,0,0"/>
+            <Button x:Name="btn_save" Content="Spara" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="0,-36,0,0" Click="btn_save_Click"/>
             <Button x:Name="btn_clear" Content="Ta Bort" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Click="btn_clear_Click"/>
             <Button x:Name="btn_close" Content="Avsluta" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="80" Height="30" Click="btn_close_Click"/>
         </Grid>
