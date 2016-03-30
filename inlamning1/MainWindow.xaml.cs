@@ -120,10 +120,12 @@ namespace inlamning1
             
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
 
+            string saveMsg = "Din FlowChart är nu sparad! \n\n(../chart.png)";
+
             pngEncoder.Save(ms);
             ms.Close();
             System.IO.File.WriteAllBytes("chart.png", ms.ToArray());
-            MessageBox.Show("Filen är sparad!");
+            MessageBox.Show(saveMsg, "FlowChartDesigner", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
